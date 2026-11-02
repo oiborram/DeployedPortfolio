@@ -1,0 +1,8 @@
+{
+  "route": "portfolio",
+  "service": {
+    "environment": {
+      "BASE_PATH": "/"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+**
+!server.mjs
+!scripts/
+!scripts/build-site.mjs
+!scripts/build-resume.mjs
+!src/
+!src/**
+!public/
+!public/assets/
+!public/assets/**
+public/assets/victoria-qa/
