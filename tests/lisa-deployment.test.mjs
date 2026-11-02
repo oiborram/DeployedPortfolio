@@ -4,6 +4,7 @@ import {createServer} from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {createPortfolioServer} from '../server.mjs';
+import {site} from '../src/site-config.mjs';
 
 test('Lisa prefix-stripping proxy serves HTML, JSON and assets with the checked-in contract',async()=>{
  const contract=JSON.parse(await readFile(new URL('../lisa.deploy.json',import.meta.url),'utf8'));
@@ -30,7 +31,8 @@ test('Lisa prefix-stripping proxy serves HTML, JSON and assets with the checked-
   const response=await fetch(origin+prefix+'resume.json');assert.equal(response.status,200);
   assert.match(response.headers.get('content-type'),/application\/json/);
   const body=await response.text();assert.equal(body,await readFile(new URL('../dist/resume.json',import.meta.url),'utf8'));
-  const resume=JSON.parse(body);assert.equal(new URL(resume.basics.url).pathname,prefix);
+  const resume=JSON.parse(body);assert.equal(resume.basics.url,site.publicBaseUrl);
+  if(!process.env.PORTFOLIO_BASE_URL)assert.equal(new URL(resume.basics.url).pathname,prefix);
   for(const path of ['src/content.mjs','.victoria/active-run.json','assets/victoria-qa/prototype-controls.mjs'])assert.equal((await fetch(origin+prefix+path)).status,404,path);
  }finally{
   await new Promise(resolve=>proxy.close(resolve));

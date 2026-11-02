@@ -33,6 +33,26 @@ The portfolio robots file advertises the reachable `/portfolio/sitemap.xml`, rat
 
 ## Lisa and GitHub
 
+### GitHub Pages mirror
+
+The same repository also publishes the production portfolio and complete JSON Resume to `https://oiborram.github.io/DeployedPortfolio/` and `https://oiborram.github.io/DeployedPortfolio/resume.json`. The `Publish portfolio and JSON Resume` workflow runs for `main` pushes and manual dispatches. It installs locked dependencies, builds from the shared source, validates JSON Resume, runs the application tests and checks that the uploaded `dist/` contains only public resources. No server credentials are needed. Action versions are pinned to immutable commit hashes.
+
+The Pages build obtains its publication base from GitHub and overrides `PORTFOLIO_BASE_URL` only for that build. HTML canonical links, JSON metadata, project URLs and sitemap consequently identify the HTTPS Pages mirror. The full technical dossiers are in the ordinary HTML as well as the JSON, so retrieving project details does not require JavaScript. JSON Resume remains a direct static file. The original Lisa deployment and its 9443 publication target are independent; `deploy` is not moved by the Pages workflow. Only this project's repository is public; publishing it does not change any other repository's visibility.
+
+To verify the Pages package locally in PowerShell:
+
+```powershell
+$env:PORTFOLIO_BASE_URL = 'https://oiborram.github.io/DeployedPortfolio/'
+npm run build
+npm run validate:data
+npm test
+npm run check:pages
+Remove-Item Env:PORTFOLIO_BASE_URL
+npm run build
+```
+
+GitHub owns origin-root crawler policy on `oiborram.github.io`; the project-level sitemap and visible HTML/JSON links provide discovery within this project's path. Successful publication and anonymous HTTP access do not guarantee immediate search indexing or retrieval by every AI provider.
+
 The deployment source repository is `oiborram/DeployedPortfolio` on GitHub. Lisa watches the `deploy` branch; updating `main` alone does not publish the site. The root `lisa.deploy.json` selects the `portfolio` route. Lisa's nginx proxy removes that route prefix before forwarding requests, so the contract sets the primary service's `BASE_PATH` to `/`. Public canonical URLs remain under `/portfolio/`. The integration test exercises this exact prefix-stripping boundary.
 
 The application owns no database and requires no secrets or persistent mounts. Do not add server paths, tokens or runtime state to its contract. The build and tests run without `.victoria/`; `tests/fixtures/approved-motion-contract.json` retains only the approved numeric motion expectations used by the tests.
