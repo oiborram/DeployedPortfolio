@@ -2,6 +2,8 @@
 
 Oscar Iborra's English software engineering and applied AI portfolio.
 
+[Read the portfolio](https://oiborram.github.io/DeployedPortfolio/) · [Read the complete JSON Resume](https://oiborram.github.io/DeployedPortfolio/resume.json) · [Read the raw JSON source](https://raw.githubusercontent.com/oiborram/DeployedPortfolio/main/public/resume.json)
+
 ## Local preview
 
 ```powershell
