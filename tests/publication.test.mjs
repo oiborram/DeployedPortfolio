@@ -59,7 +59,7 @@ for (const output of ['public', 'dist']) {
     assert.match(html, /id="intent-marker"/);
     assert.match(html, /id="technical-panel-title" data-panel-heading/);
     const robots = await read(`${output}/robots.txt`);
-    assert.equal(robots, `User-agent: *\nAllow: ${new URL(site.publicBaseUrl).pathname}\nSitemap: ${new URL('/sitemap.xml', site.publicBaseUrl).href}\n`);
+    assert.equal(robots, `User-agent: *\nAllow: ${new URL(site.publicBaseUrl).pathname}\nSitemap: ${new URL('sitemap.xml', site.publicBaseUrl).href}\n`);
     assert.doesNotMatch(robots, /Disallow:|noai/i);
     const sitemap = await read(`${output}/sitemap.xml`);
     assert.deepEqual([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]), [site.publicBaseUrl]);
@@ -141,7 +141,7 @@ test('publication override rebuilds every representation and the exact Docker-st
     for (const output of ['public', 'dist']) {
       assert.equal(JSON.parse(await readFile(join(fixture, output, 'resume.json'), 'utf8')).meta.canonical, override+'resume.json');
       assert.ok((await readFile(join(fixture, output, 'index.html'), 'utf8')).includes(`<link rel="canonical" href="${override}">`));
-      assert.ok((await readFile(join(fixture, output, 'robots.txt'), 'utf8')).includes('Sitemap: https://publication.example:9443/sitemap.xml'));
+      assert.ok((await readFile(join(fixture, output, 'robots.txt'), 'utf8')).includes('Sitemap: https://publication.example:9443/cases/sitemap.xml'));
       assert.ok((await readFile(join(fixture, output, 'sitemap.xml'), 'utf8')).includes(`<loc>${override}</loc>`));
     }
     const bundle = join(fixture, 'standalone');

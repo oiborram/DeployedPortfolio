@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /portfolio/
-Sitemap: https://iborrero.duckdns.org:9443/sitemap.xml
+Sitemap: https://iborrero.duckdns.org:9443/portfolio/sitemap.xml
