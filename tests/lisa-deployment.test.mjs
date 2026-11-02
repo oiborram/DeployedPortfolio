@@ -32,7 +32,6 @@ test('Lisa prefix-stripping proxy serves HTML, JSON and assets with the checked-
   assert.match(response.headers.get('content-type'),/application\/json/);
   const body=await response.text();assert.equal(body,await readFile(new URL('../dist/resume.json',import.meta.url),'utf8'));
   const resume=JSON.parse(body);assert.equal(resume.basics.url,site.publicBaseUrl);
-  if(!process.env.PORTFOLIO_BASE_URL)assert.equal(new URL(resume.basics.url).pathname,prefix);
   for(const path of ['src/content.mjs','.victoria/active-run.json','assets/victoria-qa/prototype-controls.mjs'])assert.equal((await fetch(origin+prefix+path)).status,404,path);
  }finally{
   await new Promise(resolve=>proxy.close(resolve));

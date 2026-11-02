@@ -27,19 +27,19 @@ Development-only observation is available at `/?victoriaQA=1#opening`. Its visib
 
 ## Publication target
 
-The reserved target is `https://iborrero.duckdns.org:9443/portfolio/`. `src/site-config.mjs` validates the publication base shared by both builds; `PORTFOLIO_BASE_URL` can override it at build time using an HTTPS URL with simple path segments and a trailing slash. `npm run build` also regenerates the JSON so HTML, JSON, sitemap and HTTP relationships share that identity. Set `BASE_PATH=/portfolio/` when running behind that prefix. `HOST` and `PORT` configure the listener; local development defaults to loopback. The prepared Docker image listens on port 8080. Its server derives HTTP publication links from the built JSON and has no runtime dependency on `src/` or `node_modules/`.
+The active target is `https://oiborram.github.io/DeployedPortfolio/`. `src/site-config.mjs` defaults to that publication base; `PORTFOLIO_BASE_URL` can override it at build time using an HTTPS URL with simple path segments and a trailing slash. `npm run build` regenerates the JSON so HTML, JSON, sitemap and HTTP relationships share that identity. The checked-in raw JSON also uses Pages URLs, avoiding links to the retired homelab deployment. `HOST`, `PORT` and `BASE_PATH` configure the optional standalone server; local development defaults to loopback. The retained Docker image listens on port 8080 and has no runtime dependency on `src/` or `node_modules/`.
 
 The JSON is a direct anonymous `application/json` GET/HEAD resource. Its public data permits anonymous cross-origin browser fetch through `Access-Control-Allow-Origin: *`, exposes the `Link` response header, and grants no credential access. `meta.canonical` identifies its exact intended public URL; `custom.deployedPortfolio` documents English language, factual authorship, claim policy and JSON Pointers to all detailed project sections. The standard `projects` array retains the summaries, contribution roles, highlights and technologies. Visible links, an HTML alternate and HTTP canonical/alternate links connect the two representations, with the same metadata on GET and HEAD for browsers and agents.
 
-The portfolio robots file advertises the reachable `/portfolio/sitemap.xml`, rather than assuming ownership of the domain root. Its sitemap lists only the human HTML URL; the JSON is discoverable through alternate links. HomeLabDashboard owns the origin-root `/robots.txt` and `/sitemap.xml`: two exact public GET/HEAD handlers provide a fixed portfolio allowlist and a sitemap index pointing to this application's sitemap. Those handlers run before dashboard session authentication; private pages and APIs keep their existing authentication. Both applications are deployed through Lisa, without router, nginx or port changes. The publication origin remains HTTPS on port 9443. Successful HTTP delivery does not prove indexing or AI citation.
+The project-level robots file advertises its sitemap, which lists the human HTML URL; the JSON is discoverable through alternate links. GitHub owns origin-root crawler policy on `oiborram.github.io`. The former homelab `/portfolio/` deployment is retired. Successful HTTP delivery does not prove indexing or AI citation.
 
 ## Lisa and GitHub
 
-### GitHub Pages mirror
+### GitHub Pages publication
 
 The same repository also publishes the production portfolio and complete JSON Resume to `https://oiborram.github.io/DeployedPortfolio/` and `https://oiborram.github.io/DeployedPortfolio/resume.json`. The `Publish portfolio and JSON Resume` workflow runs for `main` pushes and manual dispatches. It installs locked dependencies, builds from the shared source, validates JSON Resume, runs the application tests and checks that the uploaded `dist/` contains only public resources. No server credentials are needed. Action versions are pinned to immutable commit hashes.
 
-The Pages build obtains its publication base from GitHub and overrides `PORTFOLIO_BASE_URL` only for that build. HTML canonical links, JSON metadata, project URLs and sitemap consequently identify the HTTPS Pages mirror. The full technical dossiers are in the ordinary HTML as well as the JSON, so retrieving project details does not require JavaScript. JSON Resume remains a direct static file. The original Lisa deployment and its 9443 publication target are independent; `deploy` is not moved by the Pages workflow. Only this project's repository is public; publishing it does not change any other repository's visibility.
+The Pages build obtains its publication base from GitHub and sets `PORTFOLIO_BASE_URL` for that build. HTML canonical links, JSON metadata, project URLs and sitemap identify the HTTPS Pages publication. The full technical dossiers are in ordinary HTML as well as JSON, so retrieving project details does not require JavaScript. JSON Resume is a direct static file. The Pages workflow does not use a `deploy` branch. Only this project's repository is public; publishing it does not change any other repository's visibility.
 
 To verify the Pages package locally in PowerShell:
 
@@ -55,11 +55,15 @@ npm run build
 
 GitHub owns origin-root crawler policy on `oiborram.github.io`; the project-level sitemap and visible HTML/JSON links provide discovery within this project's path. Successful publication and anonymous HTTP access do not guarantee immediate search indexing or retrieval by every AI provider.
 
-The deployment source repository is `oiborram/DeployedPortfolio` on GitHub. Lisa watches the `deploy` branch; updating `main` alone does not publish the site. The root `lisa.deploy.json` selects the `portfolio` route. Lisa's nginx proxy removes that route prefix before forwarding requests, so the contract sets the primary service's `BASE_PATH` to `/`. Public canonical URLs remain under `/portfolio/`. The integration test exercises this exact prefix-stripping boundary.
+### Retired Lisa deployment
+
+This portfolio was originally published through Lisa under the homelab's `/portfolio/` route on port 9443. That deployment was retired at the owner's request on 2 November 2026, after publication on GitHub Pages. Removing the remote `deploy` branch lets Lisa's watcher retire the application through its normal managed cleanup. Do not recreate that branch without a new explicit request to deploy with Lisa.
+
+The original `lisa.deploy.json`, Dockerfile and prefix-stripping integration test are retained as recoverable configuration and historical engineering evidence. The contract selects the `portfolio` route with primary-service `BASE_PATH=/`; it does not activate a deployment by itself.
 
 The application owns no database and requires no secrets or persistent mounts. Do not add server paths, tokens or runtime state to its contract. The build and tests run without `.victoria/`; `tests/fixtures/approved-motion-contract.json` retains only the approved numeric motion expectations used by the tests.
 
-Deployment must still satisfy the current release acceptance checks before moving `deploy`. Preparing or pushing the normal source branch does not grant publication approval. Private local review history is kept under the ignored `.victoria/` directory; it is not included in the source repository or container. Origin-root robots/sitemap routing must be checked through the managed deployment pipeline without replacing other applications' policies. Adding the eventual live URL to LinkedIn and the CV remains separate work.
+Private local review history is kept under the ignored `.victoria/` directory; it is not included in the source repository or container. Rebuild and validate after editing the shared source, and commit the regenerated public representations together with source changes. Adding the live URL to LinkedIn and the CV remains separate work.
 
 ## Media
 

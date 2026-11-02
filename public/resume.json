@@ -4,8 +4,8 @@
     "name": "Oscar Iborra Maldonado",
     "label": "Software Engineer | Applied AI",
     "email": "iborramaldonado.oscar@gmail.com",
-    "url": "https://iborrero.duckdns.org:9443/portfolio/",
-    "image": "https://iborrero.duckdns.org:9443/portfolio/assets/portrait.jpg",
+    "url": "https://oiborram.github.io/DeployedPortfolio/",
+    "image": "https://oiborram.github.io/DeployedPortfolio/assets/portrait.jpg",
     "summary": "Software engineer with 7+ years of hands-on experience delivering and maintaining Angular, Vue and .NET applications. My work includes feature implementation, bug fixing, regression testing, performance tuning and release support. I use Claude, Cursor, Gemini and ChatGPT to make development more efficient, with compact RAG context, reusable workflows and explicit quality controls. I focus on scoped changes, maintainable code and verifying requirements through tests and review, alongside building applied AI products. Daily AI study and hands-on practice since March 2023. Adopted coding agents as they became available.",
     "location": {
       "city": "Alicante",
@@ -263,7 +263,7 @@
         "Vitest",
         "Playwright"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#bluecode",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#bluecode",
       "roles": [
         "Initiated and championed GenAI adoption; developed the tooling, workflows, retrieval systems and quality controls standardised for use by other developers."
       ],
@@ -349,7 +349,7 @@
         "llama.cpp",
         "Bergamot"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#aurora",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#aurora",
       "roles": [
         "Developed the application and its local speech/translation pipeline, product delivery, provisioning, performance controls and evaluation workflows."
       ],
@@ -405,7 +405,7 @@
         "MCP",
         "JSON Schema"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#ultron",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#ultron",
       "roles": [
         "Directed and developed an AI-assisted software-delivery system, defining orchestration, specialist boundaries, evidence requirements, resource budgets and controlled release workflows."
       ],
@@ -463,7 +463,7 @@
         "OAuth 2.0",
         "PKCE"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#daria",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#daria",
       "roles": [
         "Built and integrated a project-management system with agent-accessible operational data and explicit authentication, concurrency and mutation boundaries."
       ],
@@ -518,7 +518,7 @@
         "Coding agents",
         "HTTP smoke tests"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#lisa",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#lisa",
       "roles": [
         "Developed the agent onboarding and deployment workflow, repeatable operational contracts, failure handling and recovery. Used the GitHub deploy-branch pipeline to publish this portfolio to self-hosted infrastructure."
       ],
@@ -573,7 +573,7 @@
         "Schema contracts",
         "Specialist agents"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#victoria",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#victoria",
       "roles": [
         "Developed a reusable design orchestration approach with specialist graphs, explicit acceptance criteria and evidence tied to the actual source version."
       ],
@@ -628,7 +628,7 @@
         "Tool calling",
         "Regression evaluation"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#openrolera",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#openrolera",
       "roles": [
         "Engineered context budgeting, retrieval, memory-update controls and regression evaluation for long-running sessions and reliable persistent state."
       ],
@@ -684,7 +684,7 @@
         "SHA-256",
         "Persistent queues"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#iris",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#iris",
       "roles": [
         "Built and integrated local synthesis, GPU resource controls, agent tooling and the mobile delivery/command workflow."
       ],
@@ -732,7 +732,7 @@
         "Ogg Opus",
         "SHA-256"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#andrea",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#andrea",
       "roles": [
         "Organised an extensive technical AI learning resource and implemented its interactive reading, navigation and locally generated audio experience."
       ],
@@ -791,7 +791,7 @@
         "RTSP",
         "ONVIF"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#vision",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#vision",
       "roles": [
         "Developed and evaluated person-detection pipelines and local vision tooling, covering annotation, training, model comparison, inference and operational packaging."
       ],
@@ -852,7 +852,7 @@
         "KV cache",
         "Benchmarking"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#inference",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#inference",
       "roles": [
         "Configured and benchmarked local inference stacks and tuned runtime profiles for practical memory, latency and concurrency constraints."
       ],
@@ -900,7 +900,7 @@
         "Artifact provenance",
         "Independent review"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#amaia",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#amaia",
       "roles": [
         "Developed an evidence-oriented governance workflow and skill integration for preparing, checking and reviewing application release dossiers."
       ],
@@ -948,7 +948,7 @@
         "Rollback",
         "Coding agents"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#sara",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#sara",
       "roles": [
         "Developed and integrated a local evidence-led website auditing and improvement system with explicit report contracts and recovery controls."
       ],
@@ -995,7 +995,7 @@
         "GitLab CI",
         "Contract tests"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#ora",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#ora",
       "roles": [
         "Integrated and validated a public agent-facing browser interface, with explicit separation between public product knowledge and private workspace data."
       ],
@@ -1045,7 +1045,7 @@
         "ICU MessageFormat",
         "SHA-256"
       ],
-      "url": "https://iborrero.duckdns.org:9443/portfolio/#iria",
+      "url": "https://oiborram.github.io/DeployedPortfolio/#iria",
       "roles": [
         "Developed local translation and localization workflows with model lifecycle controls, stale-result protection and resource-integrity checks."
       ],
@@ -1078,7 +1078,7 @@
     }
   ],
   "meta": {
-    "canonical": "https://iborrero.duckdns.org:9443/portfolio/resume.json",
+    "canonical": "https://oiborram.github.io/DeployedPortfolio/resume.json",
     "version": "1.8.0",
     "lastModified": "2026-11-02"
   },

@@ -1,4 +1,4 @@
-// Intended publication target supplied by Oscar. This configuration does not deploy anything.
+// GitHub Pages is the active publication target. This configuration does not deploy anything.
 export function validatePublicationBaseUrl(value) {
   let url;
   try { url = new URL(value); } catch { throw new Error('PORTFOLIO_BASE_URL must be an absolute HTTPS base URL.'); }
@@ -9,6 +9,6 @@ export function validatePublicationBaseUrl(value) {
 }
 
 export const site = Object.freeze({
-  publicBaseUrl: validatePublicationBaseUrl(process.env.PORTFOLIO_BASE_URL || 'https://iborrero.duckdns.org:9443/portfolio/'),
+  publicBaseUrl: validatePublicationBaseUrl(process.env.PORTFOLIO_BASE_URL || 'https://oiborram.github.io/DeployedPortfolio/'),
   applicationRoutes: ['/', '/resume.json']
 });
