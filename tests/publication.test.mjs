@@ -45,7 +45,7 @@ for (const output of ['public', 'dist']) {
       sectionCount += sections.length;
       assert.deepEqual(resume.projects[i].highlights, projects[i].highlights);
     }
-    assert.equal(sectionCount, 41);
+    assert.equal(sectionCount, 42);
     const html = await read(`${output}/index.html`);
     assert.ok(html.includes(`<link rel="canonical" href="${site.publicBaseUrl}">`));
     assert.match(html, /<link rel="alternate" type="application\/json" href="resume.json"/);

@@ -1,7 +1,7 @@
 // Editorial copy for the human presentation; factual dossiers remain in src/content.mjs.
-export const openingIntro='I build web applications, AI products and tools that help teams develop and deploy them. I work with Claude, Cursor, Gemini and ChatGPT on agentic workflows, RAG and local inference, backed by testing and quality controls.';
+export const openingIntro='I deliver web applications and AI features, from implementation and bug fixes to tests and releases. I use Claude, Cursor, Gemini and ChatGPT to work efficiently, keep changes maintainable and verify that requirements are met.';
 export const leads={
- bluecode:'The AI toolkit I created and standardised at BlueCode helps an international engineering team find project knowledge, change code and automate development work.',
+ bluecode:'I develop and maintain software on an international Angular/Vue project. The AI toolkit I created helps the team locate code, implement changes and run quality checks efficiently.',
  aurora:'A production Windows app that turns live PC audio into subtitles and translations, with AI running locally on your computer.',
  ultron:'Develops applications as autonomously as possible through coordinated AI agents, understands my stack and infrastructure, and learns autonomously from its mistakes.',
  daria:'Keeps projects, applications, tasks and documentation in one workspace, with MCP tools that let coding agents read and update delivery context.',

@@ -28,7 +28,7 @@ export const resume = {
     {name: 'Applied AI and agents', keywords: ['Generative AI', 'AI agents', 'LangGraph', 'LangChain', 'Model Context Protocol', 'WebMCP', 'Context engineering', 'Persistent memory', 'Tool calling', 'Structured outputs']},
     {name: 'RAG and knowledge quality', keywords: ['Retrieval-augmented generation', 'SQLite FTS5', 'BM25', 'sqlite-vec', 'Local embeddings', 'RRF', 'Reranking', 'Incremental indexing', 'Provenance']},
     {name: 'Models and local inference', keywords: ['PyTorch', 'YOLO', 'ONNX Runtime', 'llama.cpp', 'GGUF', 'Quantisation', 'GPU offloading', 'Flash Attention', 'KV cache', 'Whisper', 'TTS']},
-    {name: 'Quality and delivery', keywords: ['Evals', 'Regression testing', 'Vitest', 'Playwright', 'BrowserStack', 'Azure DevOps', 'GitLab CI/CD', 'Docker', 'Nginx', 'Observability', 'Performance profiling']}
+    {name: 'Quality and delivery', keywords: ['Feature implementation', 'Bug fixing', 'Software maintenance', 'Code review', 'Acceptance criteria', 'Evals', 'Regression testing', 'Vitest', 'Playwright', 'BrowserStack', 'Azure DevOps', 'GitLab CI/CD', 'Docker', 'Nginx', 'Observability', 'Performance profiling']}
   ],
   languages: profile.languages.map(language => ({language})),
   projects: projects.map(p => ({
@@ -40,7 +40,7 @@ export const resume = {
     ...(p.id === 'bluecode' ? {entity: 'BlueCode Solutions'} : {}),
     custom: {deployedPortfolio: {id: p.id, status: p.status, category: p.category, technicalSections: p.sections, ...(p.media ? {media: p.media} : {})}}
   })),
-  meta: {canonical: new URL('resume.json', baseUrl).href, version: '1.7.0', lastModified: profile.updated},
+  meta: {canonical: new URL('resume.json', baseUrl).href, version: '1.8.0', lastModified: profile.updated},
   custom: {deployedPortfolio: {
     language: 'en', updated: profile.updated,
     author: {name: profile.name, url: profile.linkedin},

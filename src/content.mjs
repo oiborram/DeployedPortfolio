@@ -6,9 +6,9 @@ export const profile = {
   location: 'Alicante, Spain',
   linkedin: 'https://www.linkedin.com/in/oscar-iborra-maldonado-09b39116b/',
   email: 'iborramaldonado.oscar@gmail.com',
-  summary: 'Software engineer with 7+ years of experience, combining software delivery, enterprise GenAI adoption and applied AI products. I work with Claude, Cursor, Gemini and ChatGPT to build maintainable software, agentic workflows and local inference systems, with evaluation and explicit quality controls.',
+  summary: 'Software engineer with 7+ years of hands-on experience delivering and maintaining Angular, Vue and .NET applications. My work includes feature implementation, bug fixing, regression testing, performance tuning and release support. I use Claude, Cursor, Gemini and ChatGPT to make development more efficient, with compact RAG context, reusable workflows and explicit quality controls. I focus on scoped changes, maintainable code and verifying requirements through tests and review, alongside building applied AI products.',
   practice: 'Daily AI study and hands-on practice since March 2023. Adopted coding agents as they became available.',
-  updated: '2026-11-01',
+  updated: '2026-11-02',
   languages: ['English', 'Spanish', 'Valencian']
 };
 
@@ -16,7 +16,7 @@ export const experience = [
   {
     name: 'BlueCode Solutions', position: 'Senior Software Engineer | Angular & Applied AI',
     startDate: '2024-07', location: 'Alicante, Spain',
-    summary: 'International Angular/Vue microfrontend project, with daily collaboration in English. Initiated and championed the company-wide adoption of generative AI by building reusable tooling standardised for other developers.',
+    summary: 'Software development and maintenance in an international Angular/Vue microfrontend project, collaborating daily in English. Created and championed shared GenAI tooling to make project knowledge retrieval, implementation and validation more efficient and repeatable for other developers.',
     highlights: [
       'Created a professional stack of 70 shared skills and 10 custom TypeScript MCP servers, with typed contracts, scoped tools, write confirmations, hooks and CI validation.',
       'Built multiple large-scale LangGraph (LangChain) workflows, including an approximately 31-node autonomous Angular-version upgrade workflow with checkpoints, bounded repair and human decision gates.',
@@ -53,12 +53,16 @@ export const projects = [
   {
     id: 'bluecode', name: 'Enterprise AI Engineering', organisation: 'BlueCode Solutions',
     title: 'From individual AI use to a shared engineering stack.',
-    summary: 'Professional GenAI adoption, reusable agent infrastructure, local RAG and application-control assistants for an international software project.',
+    summary: 'Shared engineering tools for implementing, testing and maintaining an international Angular/Vue codebase: reusable agent workflows, cost-aware local RAG and application-control assistants.',
     status: 'Professional engineering', category: 'Enterprise AI',
     technologies: ['TypeScript', 'Python', 'Angular', 'Vue.js', 'LangGraph (LangChain)', 'MCP', 'RAG', 'SQLite FTS5', 'sqlite-vec', 'Rust', 'PyTorch', 'Azure DevOps', 'Vitest', 'Playwright'],
     highlights: ['70 shared skills', '10 custom MCP servers', '3 project wikis', '11 Angular apps + 1 Vue app'],
     contribution: 'Initiated and championed GenAI adoption; developed the tooling, workflows, retrieval systems and quality controls standardised for use by other developers.',
     sections: [
+      section('Practical delivery and engineering efficiency', [
+        'Built tooling around everyday development work: locating affected code, implementing changes, maintaining application behaviour, upgrading Angular and checking results. Shared skills and MCP tools standardise repeatable tasks for other developers.',
+        'Compact RAG context limits unnecessary token consumption; incremental refresh avoids re-indexing unchanged sources. Typed outputs, regression checks, checkpoints and bounded repair keep automation focused on verifiable changes and make failures recoverable.'
+      ]),
       section('Reusable agent infrastructure', [
         'Built 70 shared skills and 10 custom TypeScript MCP servers, supporting structured development across Claude Code, Codex, Cursor and Gemini. Hierarchical routing selects specialised guidance instead of placing every instruction in every prompt.',
         'SDK/zod schemas define tool inputs and typed results. Tool metadata, scoped operations, write confirmations and PreToolUse checks constrain sensitive actions. CI validates the reusable toolkit.',
@@ -162,12 +166,12 @@ export const projects = [
     ]
   },
   {
-    id: 'lisa', name: 'Lisa', category: 'Agent-driven CI/CD', status: 'Historical system · retired after infrastructure migration',
+    id: 'lisa', name: 'Lisa', category: 'Agent-driven CI/CD', status: 'Implemented deployment system · used for this portfolio',
     title: 'One instruction. A repeatable deployment.',
     summary: 'Agent-driven CI/CD with minimal configuration: a single skill guides autonomous new-application onboarding and deployment into self-hosted infrastructure.',
     technologies: ['C#', '.NET', 'Git', 'Docker Compose', 'Nginx', 'Coding agents', 'HTTP smoke tests'],
     highlights: ['Single-skill onboarding', 'Derived app configuration', 'Durable repair + rollback'],
-    contribution: 'Developed the agent onboarding and deployment workflow, repeatable operational contracts, failure handling and recovery. Retained here for its engineering value after an infrastructure change.',
+    contribution: 'Developed the agent onboarding and deployment workflow, repeatable operational contracts, failure handling and recovery. Used the GitHub deploy-branch pipeline to publish this portfolio to self-hosted infrastructure.',
     sections: [
       section('From repository to deployment contract', [
         'An agent inspects a new application and derives its build, routing, persistence and deployment requirements from the repository. The skill orchestrates preparation instead of requiring a hand-written initial configuration for each application.',
@@ -181,7 +185,7 @@ export const projects = [
       section('Repair and recovery', [
         'Before changing managed configuration, the pipeline snapshots it, validates Compose, builds, restarts and performs frontend/API HTTP smoke tests. Failed deployment or routing restores prior configuration and reconciles the stack.',
         'Durable fixes belong in application contracts, Lisa code or the skill, so the next run repeats the corrected procedure instead of depending on an undocumented server patch.',
-        'Backups and configuration rollback are explicit. Restoring configuration is not equivalent to reversing an arbitrary database migration. Lisa is now retired following migration to a different infrastructure.'
+        'Backups and configuration rollback are explicit. Restoring configuration is not equivalent to reversing an arbitrary database migration. This portfolio uses the GitHub deploy-branch pipeline with confirmed commit tracking and public HTTP verification.'
       ])
     ]
   },
